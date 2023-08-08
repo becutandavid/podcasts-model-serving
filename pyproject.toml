@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "podcasts-model-serving"
+version = "0.1.0"
+description = "Model serving package for the podcasts app"
+authors = ["David Galevski <becutandavid@gmail.com>"]
+readme = "README.md"
+packages = [{include = "podcasts_model_serving"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ray = {extras = ["serve"], version = "^2.6.2"}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+mypy = "^1.2.0"
+ruff = "^0.0.262"
+pre-commit = "^3.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+strict = true
